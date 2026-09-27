@@ -10,7 +10,7 @@ Users can search for an IP address, domain, or location and get detailed informa
 
 ## 📸 Screenshots
 
-![Project Preview](./screenshot/preview.pngpreview.png)
+![Project Preview](./screenshot/preview.png)
 
 
 ## ✨ Features
