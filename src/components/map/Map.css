@@ -1,0 +1,19 @@
+.map {
+  position: relative;
+  z-index: 1;
+  min-height: 870px;
+  height: calc(100vh - 90px);
+}
+
+@media (max-width: 768px) {
+  .map {
+    width: 100%;
+    height: calc(100vh-900px);
+    min-height: 700px;
+    position: absolute;
+    top:85px;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+}

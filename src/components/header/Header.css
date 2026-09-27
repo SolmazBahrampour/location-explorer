@@ -1,0 +1,164 @@
+.header {
+  background-color: var(--clr-header-bg);
+  height: 70px;
+  width: 100%;
+  background: linear-gradient(135deg,
+    var(--clr-header-gr-1),
+    var(--clr-header-gr-2)
+  );
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 120px;
+  position: relative;
+  left: 0;
+  z-index: 2;
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -50px;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to bottom,
+      #6c9de1,
+    transparent
+  );
+  pointer-events: none;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+}
+
+.title img {
+  width: 100px;
+}
+
+.title-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 25px;
+}
+
+.title-text h2 {
+  color: white;
+  font-size: 20px;
+  font-weight: var(--fw-500);
+
+}
+
+.title-text p {
+  color: var(--clr-small-text);
+  font-size: 12px;
+}
+
+.textbox input {
+  color: var(--clr-gray-400);
+  padding: 13px 25px;
+  font-size: 15px;
+  border: none;
+  border-radius: 40px;
+  width: 600px;
+}
+
+.textbox button {
+  background-color: var(--clr-button-bg);
+  width: 35px;
+  height: 34px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-left: -45px;
+}
+
+.textbox button img {
+  width: 9px;
+  height: 11px;
+}
+
+
+@media (max-width: 980px) and (min-width: 769px) {
+  .header {
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .title {
+    flex-shrink: 0;
+  }
+
+  .title-text h2 {
+    white-space: nowrap;
+    font-size: 18px;
+  }
+
+  .textbox {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .textbox input {
+    width: 100%;
+  }
+}
+
+@media (max-width : 768px) {
+  .header {
+    min-height: unset;
+    height: 85px;
+    padding: 5px 20px;
+    flex-direction: column;
+    gap: 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+  }
+
+  .header::after {
+    display: none;
+  }
+
+  .title {
+    align-items: center;
+  }
+
+  .title img {
+    width: 70px;
+  }
+
+  .title-text {
+    margin-top: 0;
+    gap: 3px;
+  }
+
+  .title-text h2 {
+    font-size: 18px;
+  }
+
+  .title-text p {
+    font-size: 11px;
+  }
+
+  .textbox {
+    width: 100%;
+  }
+
+  .textbox input {
+    width: 100%;
+    padding: 12px 50px 12px 18px;
+    font-size: 14px;
+  }
+
+  .textbox button {
+    width: 34px;
+    height: 34px;
+    margin-left: -45px;
+  }
+}
